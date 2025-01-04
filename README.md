@@ -37,3 +37,39 @@ Evaluation Metrics: BLEU and ROUGE scores for interview response analysis.
    cd ai-mock-interviewer
 
 
+   pip install -r requirements.txt
+
+   streamlit run main.py
+
+## How to Use
+**Step 1:** Provide Details
+Enter the Job Role and Job Description in the sidebar.
+Upload your resume in PDF format.
+**Step 2:** Start the Interview
+Click Submit Details to initialize the session.
+Press Start Interview to begin receiving AI-generated questions.
+**Step 3:** Respond and Receive Feedback
+Provide your response to the displayed question.
+Get AI Feedback on your response.
+Continue to the next question or end the interview.
+**Step 4:** Download Results
+View and download your interview session's history from the application.
+
+
+## Technologies Used
+**Frontend:** Streamlit
+**Backend:** OpenAI GPT
+**Audio Processing:** gTTS (Google Text-to-Speech)
+**Data Visualization:** JSON download functionality
+
+## Acknowledgments
+Special thanks to my group members for their collaboration and to our mentors for their guidance and support throughout this project. This project is a testament to the power of teamwork and innovative thinking.
+
+## Contact
+Feel free to reach out or contribute to this project!
+
+**Connect with me:**
+- [LinkedIn](www.linkedin.com/in/muhammad-usmanhni/) - Muhammad Usman
+
+
+
