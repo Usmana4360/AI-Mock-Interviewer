@@ -1,5 +1,5 @@
 from initialization_with_logger import *
-
+import streamlit as st
 
 # Streamlit app setup
 st.title("AI Mock Interviewer 💼")
@@ -8,6 +8,13 @@ st.title("AI Mock Interviewer 💼")
 st.sidebar.text_input("Enter Job Role", placeholder="e.g., Data Scientist", key="job_role")
 st.sidebar.text_area("Enter Job Description", placeholder="Provide job description here...", height=150, key="job_description")
 resume_pdf = st.sidebar.file_uploader("Upload Resume (PDF only)", type=["pdf"], key="resume_pdf")
+
+# Initialize session state variables
+if "interview_start" not in st.session_state:
+    st.session_state["interview_start"] = False
+
+if "details_submitted" not in st.session_state:
+    st.session_state["details_submitted"] = False
 
 if not st.session_state["interview_start"]:
 
