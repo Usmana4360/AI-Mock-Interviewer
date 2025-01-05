@@ -281,4 +281,3 @@ def conclude_interview():
 # Initialize the RunnableWithMessageHistory
 with_message_history = RunnableWithMessageHistory(model, get_session_history)
 logger.info("RunnableWithMessageHistory initialized successfully.")
-
