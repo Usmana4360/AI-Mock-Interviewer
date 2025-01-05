@@ -9,12 +9,39 @@ st.sidebar.text_input("Enter Job Role", placeholder="e.g., Data Scientist", key=
 st.sidebar.text_area("Enter Job Description", placeholder="Provide job description here...", height=150, key="job_description")
 resume_pdf = st.sidebar.file_uploader("Upload Resume (PDF only)", type=["pdf"], key="resume_pdf")
 
-# Initialize session state variables
+if "conversation_history" not in st.session_state:
+    st.session_state["conversation_history"] = []
+    logger.debug("Session state 'conversation_history' initialized.")
+
+
+if "response_input" not in st.session_state:
+    st.session_state["response_input"] = ""
+    logger.debug("Session state 'response_input' initialized.")
+
+if "current_question" not in st.session_state:
+    st.session_state["current_question"] = ""
+    logger.debug("Session state 'current_question' initialized.")
+
 if "interview_start" not in st.session_state:
     st.session_state["interview_start"] = False
+    logger.debug("Session state 'interview_start' initialized.")
 
 if "details_submitted" not in st.session_state:
     st.session_state["details_submitted"] = False
+    logger.debug("Session state 'details_submitted' initialized.")
+
+
+if "response_received" not in st.session_state:
+    st.session_state["response_received"] = False
+    logger.debug("Session state 'response_received' initialized.")
+
+if "question_asked" not in st.session_state:
+    st.session_state["question_asked"] = False
+    logger.debug("Session state 'question_asked' initialized.")
+
+if "interview_concluded" not in st.session_state:
+    st.session_state["interview_concluded"] = False
+    logger.debug("Session state 'interview_concluded' initialized.")
 
 if not st.session_state["interview_start"]:
 
